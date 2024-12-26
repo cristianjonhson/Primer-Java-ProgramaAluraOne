@@ -4,7 +4,7 @@ public class NamingConventionDetector {
         String[] testStrings = {
                 "myMethod",           // método en camelCase
                 "MyClass",            // clase en PascalCase
-                "MyInterface",        // interfaz en PascalCase
+                "IShape",             // interfaz en PascalCase con convención I
                 "myVariable",         // variable en camelCase
                 "SomeOtherMethod",    // método en PascalCase
                 "anotherVariable",    // variable en camelCase
@@ -22,14 +22,13 @@ public class NamingConventionDetector {
             return "Cadena vacía o nula";
         }
 
-        // Comprobación para clases (PascalCase)
+        // Comprobación para clases o interfaces (PascalCase)
         if (str.matches("[A-Z][a-zA-Z0-9]*")) {
-            return "Clase (PascalCase)";
-        }
-
-        // Comprobación para interfaces (PascalCase)
-        if (str.matches("[A-Z][a-zA-Z0-9]*")) {
-            return "Interfaz (PascalCase)";
+            if (str.startsWith("I")) {
+                return "Interfaz (PascalCase)";
+            } else {
+                return "Clase (PascalCase)";
+            }
         }
 
         // Comprobación para métodos (camelCase)
