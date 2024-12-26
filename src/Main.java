@@ -4,5 +4,8 @@ public class Main {
         System.out.println("Película: Matrix");
         int fechaDeLanzamiento = 1999;
         System.out.println(fechaDeLanzamiento);
+
+        boolean incluidoPlan = true;
+        System.out.println("Esta incluido en el plan? " + incluidoPlan);
     }
 }
