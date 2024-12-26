@@ -6,6 +6,7 @@ public class Main {
         System.out.println(fechaDeLanzamiento);
 
         boolean incluidoPlan = true;
-        System.out.println("Esta incluido en el plan? " + incluidoPlan);
+        String incluidoEnPlan = incluidoPlan ? "Sí" : "No"; // Usamos el operador ternario
+        System.out.println("¿Está incluido en el plan? " + incluidoEnPlan);
     }
 }
